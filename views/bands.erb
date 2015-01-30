@@ -1,0 +1,30 @@
+<h1>groupie.</h1>
+
+<hr>
+
+<h2>band index</h2>
+
+<% if Band.all().any?() %>
+<ul>
+  <% Band.all().each() do |band| %>
+
+  <li><a href="/bands/<%= band.id() %>"><%= band.band_name() %></a></li>
+  <% end %>
+</ul>
+<% else %>
+<p>no bands yet!</p>
+<% end %>
+
+<hr>
+
+<form action="/bands" method="post">
+  <div>
+    <label class="form-label" for="band_name">add band:</label>
+    <input class="form-control" id="band_name" type="text" name="band_name" autofocus>
+  </div>
+  <button type="submit" class="btn btn-sm btn-primary">add&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
+</form>
+
+<hr>
+
+<a href="/">return to the venue index?</a>

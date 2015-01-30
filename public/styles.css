@@ -1,0 +1,83 @@
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-left: 2em;
+  position: relative;
+}
+
+li:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-right: 0.5em;
+}
+
+hr {
+  clear: both;
+  margin-bottom: 2em;
+}
+
+form {
+  padding-bottom: 3em;
+}
+.band-title:after, .band-title:before {
+  content: "\f001";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.band-title:after {
+  padding-left: 0.5em;
+}
+
+.band-title:before {
+  padding-right: 0.5em;
+}
+
+.form-control {
+  display: inline-block;
+  float: left;
+  width: 45%;
+  box-shadow: none !important;
+  border: 0;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 1px solid;
+  background-color: #EEE;
+}
+
+.form-label {
+  float: left;
+  margin-right: 1em;
+  margin-top: 0.4em;
+}
+
+.btn {
+  display: inline;
+  float: left;
+  margin-left: 1em;
+  margin-top: 0.25em;
+}
+
+.add-venue {
+  margin-left: 0;
+  margin-top: 1em;
+}

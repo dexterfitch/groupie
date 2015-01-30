@@ -1,0 +1,18 @@
+<h1><%= @venue.venue_name() %></h1>
+
+<hr>
+<h2>bands</h2>
+
+<% if @venue.bands().any?() %>
+  <ul>
+    <% @venue.bands().each() do |band| %>
+      <li><a href="/bands/<%= band.id() %>"><%= band.band_name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>there are no bands for this venue yet!</p>
+<% end %>
+
+<hr>
+
+<a href="/">return to the venue index?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/bands">go to the band index?</a>

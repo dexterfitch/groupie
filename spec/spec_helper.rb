@@ -13,6 +13,5 @@ RSpec.configure do |config|
     Venue.all().each() do |x|
       x.destroy()
     end
-    end
   end
 end
