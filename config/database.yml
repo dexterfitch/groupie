@@ -1,0 +1,8 @@
+
+development:
+  adapter: postgresql
+  database: groupie_development
+
+test:
+  adapter: postgresql
+  database: groupie_test
