@@ -20,12 +20,11 @@
     <input type="hidden" name="band_id" value="<%= @band.id() %>">
     <div>
       <h3>add venues for this band</h3>
-
       <% @venues.each() do |venue| %>
         <input type="checkbox" name="venue_names[]" value="<%= venue.venue_name() %>">&nbsp;&nbsp;&nbsp;<%= venue.venue_name() %><br>
       <% end %>
     </div>
-      <button type="submit" class="btn btn-sm btn-primary add-venue">add&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
+      <button type="submit" class="btn btn-sm btn-primary add-delete">add&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
 
   </form>
 

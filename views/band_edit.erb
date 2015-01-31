@@ -1,0 +1,20 @@
+<h1><%= @band.band_name() %></h1>
+<h2>edit.</h2>
+<hr>
+
+<form action="/bands/<%= @band.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <label class="form-label" for="band_name">change band name:</label>
+  <input class="form-control" name="band_name" type="text" value="<%= @band.band_name() %>" autofocus>
+
+  <button type="submit" class="btn btn-sm btn-primary">update&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
+</form>
+
+<hr>
+
+<form action="/bands/<%= @band.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit" class="btn btn-sm btn-primary add-delete">delete band&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
+</form>
