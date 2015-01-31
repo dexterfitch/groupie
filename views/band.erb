@@ -11,7 +11,7 @@
     <% end %>
   </ul>
 <% else %>
-  <p>There are no venues for this band yet!</p>
+  <p>no venues yet!</p>
 <% end %>
 
 <% if @venues.any?() %>
@@ -21,7 +21,8 @@
     <div>
       <h3>add venues for this band</h3>
       <% @venues.each() do |venue| %>
-        <input type="checkbox" name="venue_names[]" value="<%= venue.venue_name() %>">&nbsp;&nbsp;&nbsp;<%= venue.venue_name() %><br>
+        <span class="checkboxes"><input type="checkbox" id="venue_names[]" name="venue_names[]" value="<%= venue.venue_name() %>">
+        <label for="venue_names[]">&nbsp;&nbsp;&nbsp;<%= venue.venue_name() %></label></span><br>
       <% end %>
     </div>
       <button type="submit" class="btn btn-sm btn-primary add-delete">add&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
@@ -32,4 +33,6 @@
 
 <hr>
 
-<a href="/">return to the venue index?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/bands/<%= @band.id() %>/edit">edit this band?</a>
+<a href="/bands/<%= @band.id() %>/edit">edit this band?</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="/bands">return to band index</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="/">return to venues</a>
