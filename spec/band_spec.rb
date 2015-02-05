@@ -13,4 +13,13 @@ describe(Band) do
     end
   end
 
+  describe('default scope') do
+    let!(:band1) { Band.create(band_name: "Chilled") }
+    let!(:band2) { Band.create(band_name: "Animals") }
+
+    it("orders A-Z") do
+      expect(Band.all).to(eq([band2, band1]))
+    end
+  end
+
 end

@@ -13,4 +13,13 @@ describe(Venue) do
     end
   end
 
+  describe('default scope') do
+    let!(:venue1) { Venue.create(venue_name: "Stratosphere") }
+    let!(:venue2) { Venue.create(venue_name: "Crystal Ballroom") }
+
+    it("orders A-Z") do
+      expect(Venue.all).to(eq([venue2, venue1]))
+    end
+  end
+
 end

@@ -3,8 +3,6 @@ class Venue < ActiveRecord::Base
   validates(:venue_name, { :presence => true, :length => { maximum: 70 }, :uniqueness => { :case_sensitive => false } })
   before_save(:titlecase_venue_name)
 
-  Venue.order('venue_name')
-
   default_scope { order('venue_name') }
 
   private
