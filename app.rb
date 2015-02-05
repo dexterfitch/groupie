@@ -66,10 +66,10 @@ post('/bands_venues') do
   band_id = params["band_id"]
   band = Band.find(band_id)
   band_venues = band.venues()
-  venue_names = params["venue_names"]
-  venue_names.each() do |venue_name|
-    venue = Venue.find_by(venue_name: venue_name)
-    if ! band_venues.include?(venue)
+  venue_ids = params["venue_ids"]
+  venue_ids.each() do |venue_id|
+    venue = Venue.find(venue_id)
+    if !band_venues.include?(venue)
       band.venues << venue
     end
   end

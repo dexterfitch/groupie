@@ -21,8 +21,8 @@
     <div>
       <h3>add venues for this band</h3>
       <% @venues.each() do |venue| %>
-        <span class="checkboxes"><input type="checkbox" id="venue_names[]" name="venue_names[]" value="<%= venue.venue_name() %>">
-        <label for="venue_names[]">&nbsp;&nbsp;&nbsp;<%= venue.venue_name() %></label></span><br>
+        <span class="checkboxes"><input type="checkbox" id="venue_ids[]" name="venue_ids[]" value="<%= venue.id() %>">
+        <label for="venue_ids[]">&nbsp;&nbsp;&nbsp;<%= venue.venue_name() %></label></span><br>
       <% end %>
     </div>
       <button type="submit" class="btn btn-sm btn-primary add-delete">add&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-music"></span></button>
